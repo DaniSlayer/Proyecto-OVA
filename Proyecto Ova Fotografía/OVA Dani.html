@@ -141,21 +141,32 @@
            z-index: 1;
          }
          
-         .contenido-text {
-           display: flex;
-           z-index: -1;
-           flex-direction: column;
-           justify-content: center;
-           
-         }
-         
-         .contenido-text h3 {
-           color: #fff;
-         }
-         
-         .contenido-text span {
-           color: #fff;
-         }
+        .contenido-text {
+            display: block;
+            max-width: 800px;
+            margin: 100px auto 20px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            color: #fff;
+        }
         
     </style>
     
@@ -190,9 +201,29 @@
       </div>
     </div>
     
-    <div class="contenido-text">
+<div class="contenido-text">
     <h3>Introducción a la Fotografía</h3>
-    <span>La fotografía es el arte y la técnica de capturar imágenes utilizando la luz. A lo largo de su historia, ha pasado de ser una herramienta exclusiva y experimental a una forma de expresión accesible y versátil en el mundo digital. La fotografía impacta en muchas áreas: desde el arte y el periodismo hasta la publicidad y la ciencia, permitiendo comunicar ideas, emociones y datos de manera única.</span></div>
+    <p>La fotografía es el arte y la técnica de capturar imágenes utilizando la luz. A lo largo de su historia, ha pasado de ser una herramienta exclusiva y experimental a una forma de expresión accesible y versátil en el mundo digital. La fotografía impacta en muchas áreas: desde el arte y el periodismo hasta la publicidad y la ciencia, permitiendo comunicar ideas, emociones y datos de manera única.</p>
+</div>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <h3>ISO</h3>
+        <p>El ISO controla la sensibilidad del sensor de la cámara a la luz. Un ISO bajo (ej., 100) produce imágenes con menos ruido, ideal en entornos bien iluminados, mientras que un ISO alto (ej., 3200) es útil en condiciones de poca luz, pero aumenta el riesgo de ruido en la imagen.</p>
+    </div>
+    <div class="grid-item">
+        <h3>Apertura del Diafragma (f-stop)</h3>
+        <p>La apertura se refiere al tamaño de la abertura en el lente por donde entra la luz. Se mide en "f-stops" (ej., f/2.8, f/16). Una apertura grande (número f bajo) permite más luz y crea una profundidad de campo reducida (fondo desenfocado). Una apertura pequeña (número f alto) aumenta la nitidez en toda la escena.</p>
+    </div>
+    <div class="grid-item">
+        <h3>Velocidad de Obturación</h3>
+        <p>Controla cuánto tiempo está abierto el obturador, permitiendo que entre luz al sensor. Velocidades rápidas (ej., 1/1000s) congelan el movimiento, mientras que velocidades lentas (ej., 1/10s) producen efectos de desenfoque, útiles para capturar movimiento y luz en escenas nocturnas.</p>
+    </div>
+    <div class="grid-item">
+        <h3>Balance de Blancos</h3>
+        <p>Ajusta los tonos de la imagen para que los colores sean más naturales bajo diferentes fuentes de luz (luz de día, fluorescente, tungsteno, etc.). Un ajuste adecuado del balance de blancos evita tonos azulados o anaranjados no deseados en las fotos.</p>
+    </div>
+</div>
     
 <script>
   const mensaje = document.querySelector('.mensaje');
